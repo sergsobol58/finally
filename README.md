@@ -4,6 +4,8 @@ A visually stunning AI-powered trading workstation that streams live market data
 
 Built entirely by coding agents as a capstone project for an agentic AI coding course.
 
+> **Status:** Under active development. The market data backend (GBM simulator + Massive client, SSE-ready price cache) is complete and tested; portfolio, AI chat, frontend, and Docker packaging are in progress. See [`planning/PLAN.md`](planning/PLAN.md) for the full spec and [`planning/MARKET_DATA_SUMMARY.md`](planning/MARKET_DATA_SUMMARY.md) for what's built.
+
 ## Features
 
 - **Live price streaming** via SSE with green/red flash animations
@@ -30,11 +32,19 @@ Single Docker container serving everything on port 8000:
 cp .env.example .env
 # Add your OPENROUTER_API_KEY to .env
 
-# Run with Docker
+# Run with Docker (once packaging is complete)
 docker build -t finally .
 docker run -v finally-data:/app/db -p 8000:8000 --env-file .env finally
 
 # Open http://localhost:8000
+```
+
+### Run the market data demo (available now)
+
+```bash
+cd backend
+uv run market_data_demo.py   # live terminal dashboard of all 10 tickers
+uv run pytest                # backend test suite
 ```
 
 ## Environment Variables

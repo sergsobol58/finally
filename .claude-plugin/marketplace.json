@@ -1,0 +1,18 @@
+{
+    "name": "serhii-tools",
+    "owner": {
+        "name": "Serhii",
+        "email": "s.soboldev@gmail.com"
+    },
+    "plugins": [
+        {
+            "name": "independendent-reviewer",
+            "source": "./independent-reviewer",
+            "description": "Carry out an independent review of all changes since last commit",
+            "version": "1.0.0",
+            "author": {
+                "name": "Ed"
+            }
+        }
+    ]
+}
