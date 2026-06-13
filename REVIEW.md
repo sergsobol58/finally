@@ -1,5 +1,7 @@
 # Review
 
+Scope: last commit (`HEAD~1..HEAD`), because the working tree had no uncommitted changes.
+
 ## Findings
 
 1. **High - Plugin identity is inconsistent, so the enabled plugin entry can point at the wrong plugin.**
